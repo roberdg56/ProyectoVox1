@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Container</title>
+    <style>
+        .section2 {
+            background: #cee;
+            max-width: 1400px;
+            margin: 5rem auto 5rem auto;
+        }
+
+        .image-container {
+            background: #ec4646;
+            border: #611c1c dotted 1px;
+            max-width: 1400px;
+            margin: 6rem auto 6rem auto;
+            display: flex;
+            flex-flow: row wrap;
+            flex-basis: 0;
+        }
+
+        h1 {
+            /* border: #ec4646 dotted 1px; */
+            color: #ec4646;
+            text-align: center;
+        }
+
+        h2 {
+            /* border: #611c1c dotted 1px; */
+            /* color: #ece146; */
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .image {
+            flex: auto;
+            width: 200px;
+            margin: .5vw;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section2">
+        <h1>Image Container</h1>
+        <div class="image-container">
+            <div class="image">
+                <img src="../img/content-images/BlogImage-1.jpg" alt="Image 1">
+            </div>
+            <div class="image">
+                <img src="../img/content-images/BlogImage-2.jpg" alt="Image 1">
+            </div>
+            <div class="image">
+                <img src="../img/content-images/BlogImage-3.jpg" alt="Image 1">
+            </div>
+            <div class="image">
+                <img src="../img/content-images/BlogImage-4.jpg" alt="Image 1">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

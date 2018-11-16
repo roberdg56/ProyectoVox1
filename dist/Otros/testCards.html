@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Cards 1</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            /* font-family: 'Courier New', Courier, monospace; */
+            /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 35px;
+        }
+
+        .cards-container {
+            border: #3d3c3c dotted 1px;
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+
+        .card-container {
+            background: #FFf;
+            border: #3d3c3c solid 1px;
+            /* max-width: 300px; */
+            min-width: 200px;
+            margin: 1rem 1rem;
+            display: flex;
+            flex-flow: column wrap;
+            flex-basis: 0;
+            flex-grow: 1;
+        }
+
+
+        .icon-container {
+            margin: 0 auto;
+        }
+
+        .icon-container img {
+            width: 100px;
+            height: auto;
+        }
+
+        .card-content {
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .text-container {
+            text-align: center;
+            padding: 0 .5rem;
+        }
+
+        .text-container p {
+            font-size: .9rem;
+        }
+
+        .call2Action {
+            border: dotted 1px #eb4747;
+            /* width: 100%; */
+            text-align: center;
+            padding: .5rem .5rem;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: rgb(82, 76, 76);
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- -------- Services Section Test  ---------->
+    <div class="section2">
+        <h1>Servicios</h1>
+        <div class="cards-container">
+            <!-- Card Container -->
+            <div class="card-container">
+                <div class="icon-container">
+                    <img src="../img/Icons3/iguana.png" alt="Icon 1" width="100" height="100">
+                </div>
+                <div class="card-content">
+                    <div class="text-container">
+                        <h2>Medios</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum corrupti perferendis et
+                            quaerat similique, enim placeat saepe at doloribus ea voluptatem omnis aliquid aperiam,
+                            facere optio dolorum praesentium explicabo sed?</p>
+                    </div>
+                    <div class="call2Action">
+                        <a href="#">Conoce más</a>
+                    </div>
+                </div>
+            </div> <!-- End of Card Container -->
+
+        </div> <!-- End of Cards Section -->
+    </div>
+</body>
+
+</html>

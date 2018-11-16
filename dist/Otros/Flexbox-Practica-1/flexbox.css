@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    /*Sólo resetea todo si se coloca aquí. Impide que al agregar un padding la caja crezca hacia afuera*/
+    /* margin-block-start: 0; /*interesante el resultado */
+    /* margin-block-end: 0; */
+    /* Interesante el resultado*/
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+    /* Aquí no funciona ponerlo pues no resetea todo*/
+}
+
+body {
+    background-color: rgb(235, 236, 150);
+    font-family: Helvetica, sans-serif;
+    padding-bottom: 100px;
+    /*Asigna un espacio hacia abajo al final de el último contenedor dentro del 'Body'. Le da "aire" o espacio para que el último contenedor no quede en el borde inferior pegado al final */
+}
+
+h2,
+h3 {
+    margin: 0 0 .75em 0;
+    /* Le está asignando un valor de espacio hacia abajo entre los titulares y los parrafos o niveles siguientes de texto que haya en todo el documento. Se puede cambiar o resetear directamente en cada elemento determinado que queramos modificar haciéndolo de manera más directa con su selector directo*/
+}
+
+input {
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+}
+
+
+/* first example */
+.container {
+    max-width: 750px;
+    /* Asigna un valor máximo al ancho. Sin embargo al reducirse el  espacio del contenedor, en este caso el "Body" que está definido por la pantalla, este se reducirá. Si sólo ponemos width no responderá a la reducción de su contenedor que en este caso es el "body" reflejado por el total de pantalla disponible para mostrar el contenido de la página*/
+    margin: 20px auto 0 auto;
+    /* Separa de la parte de arriba (20px), es decir, de su contenedor (body) y luego lo centra asignando valores de auto tanto a la derecha como hacia la izquierda y deja un margen de 0 hacia abajo. Inisito, su contendor directo o padre es el mismo "Body" de la página*/
+    padding: 30px;
+    /*Le asigna un espacio de separación entre los bordes del contenedor padre y sus items dentre de éste. Es importante para la posición final que toma dentro de la página puesto que aunque no se viera la caja contenedora si se estaría notando la diferencia de en donde inicia y donde termina */
+    background-color: rgb(238, 130, 130);
+}
+
+.form-row {
+    padding: 10px 0;
+    /*Asigna el espacio en el eje vertical entre los dos 'Input' (Caja y equiqueta o nombre) dentro del contenedor*/
+    display: flex;
+    /*Permite aplicar en los elementos contenidos la propiedad "Flex". Tiene que ponerse en el contenedor padre para que funcione en los hijos*/
+}
+
+.form-row label {
+    padding-right: 40px;
+    /* flex: 1; */
+    /* Interesante si se aplica así*/
+    /*Esta propiedad ayuda a separar 40px los nombres "Name" y "Favorite Color" de las cajas de "Input"*/
+}
+
+.form-row input {
+    flex: 1;
+    /* Alarga las cajas del "input" hasta el final del contenedor menos el padding*/
+}
+
+/* second example */
+.column-layout {
+    max-width: 1400px;
+    background-color: #FFF;
+    margin: 40px auto 0 auto;
+    /*Separa del contenedor proximo anterior hacia abajo (40px) y centra el contenedor dividiendo el espacio libre entre ambos lados de manera igual. No tiene margen hacia abajo*/
+    line-height: 1.65;
+    /*propiedad para 'Interlineado entre texto (principalmente supongo)*/
+    padding: 20px 50px;
+    /* Le da espacio hacia adentro. El primero lo hace en el eje vertical (la parte de arriba y abajo) y el segundo en el horizontal (los lados)*/
+    display: flex;
+    /*El valor por defecto es alinear y distribuir los elementos dentro del contenedor en línea o o por "Row". El espacio de alto total en este caso del contenedor estará definido por el contenido de mayor espacio, en éste caso el primer item o hijo, es decir, el 'Main.column' que es el que tiene más contenido (texto)*/
+}
+
+.main-column {
+    border: #2a2a2a 1px dotted;
+    /*Para ver como se compone la caja contenedora de cada uno*/
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-one {
+    border: #2a2a2a 1px dotted;
+    flex: 1;
+    order: 1;
+    margin: 0 0 2em 0;
+    /* Interesante el resultado */
+    text-align: right;
+}
+
+.sidebar-one h3 {
+    margin: 2.9em 0 .45em 0;
+    /*De éste modo se alinea el parrafo del "Sidebar One" con el del "Main Column"*/
+}
+
+.sidebar-one p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.sidebar-two {
+    border: #2a2a2a 1px dotted;
+    flex: 1;
+    order: 3;
+}
+
+/* ---------- third example ---------- */
+.call-outs-container {
+    max-width: 1400px;
+    margin: 40px auto 0 auto;
+    /*Los 40px le dan separación del anterior contenedor y el resto sólo sirve para centralo en la página*/
+    border: #990b47 dotted 1px;
+    /* align-items: stretch; /*Sin la propiedad en los hijos de 'Flex:1' que los distribuye a todos por igual en el eje vertical, ésta propiedad no aplicará. De tener la propiedad en 1 se pueden aplicar 'flex-star', 'flex-end' y 'center' aliniendolos pero manteniendo la medida de su caja contenedora. La propiedad 'stretch' es por default la que los mantiene en el mismo tamaño sin importar el contenido, lo que es lo mismo que no ponerla y sólo agregar el valor de 1 a la propiedad 'flex' en cada contenedor hijo */
+    /* display: flex;
+    justify-content: space-between; */
+    /* las mandamos al @mediaQuery para que éstos contenedores los acomodé en columnas y no en una sóla fila*/
+}
+
+.call-out {
+    padding: 20px;
+    /* box-sizing: border-box; */
+    margin-bottom: 20px;
+    /* flex: 1; */
+    /* margin-right: 10px; */
+    /* width: 30%; */
+    /*Es lo mismo que 'flex-basis'*/
+    flex-basis: 30%
+}
+
+@media (min-width: 900px) {
+    .call-outs-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+.call-out:nth-child(1) {
+    background-color: #c0dbe2;
+}
+
+.call-out:nth-child(2) {
+    background-color: #cdf1c3;
+}
+
+.call-out:nth-child(3) {
+    background-color: #ccb9da;
+    margin-bottom: 0;
+    /*eliminamos margen del último elemento en el contenedor. Se puede hacer de otra manera para darle espaciado entre filas. Checar cual es ése método porque así cuando regresa al Flex de Row el último elemento ocupa más espacio*/
+}
+
+/* ---------- fourth example ---------- */
+.fixed-size-container {
+    max-width: 1400px;
+    margin: 40px auto 0 auto;
+    background-color: #FFF;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.fixed-size {
+    width: 150px;
+    height: 100px;
+    background-color: #990b47;
+    color: #FFF;
+    line-height: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+/* fifth example */
+.banner {
+    height: 400px;
+    max-width: 700px;
+    margin: 40px auto 40px auto;
+    background-color: #2a2a2a;
+    display: flex;
+}
+
+.center-me {
+    color: #FFF;
+    font-size: 50px;
+    margin: auto;
+}
+
+/* sixth example */
+.equal-height-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.first {
+    background-color: #FFF;
+    padding: 20px;
+    flex: 1;
+}
+
+.second {
+    background-color: yellow;
+    flex: 1;
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: column;
+}
+
+.second-a {
+    background-color: #c0dbe2;
+    flex: 1;
+}
+
+.second-b {
+    background-color: #cdf1c3;
+    flex: 1;
+}
+
+/* ---------- Excercise 1 ---------- */
+
+.box-parent-container {
+    max-width: 900px;
+    margin: 40px auto 40px auto;
+    display: flex;
+
+}
+
+.second-a {}
+
+.second-a img {
+    /* display: block;
+    margin: auto; */
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    /* width: 100%; */
+}
+
+/* ---------- Excercise 1 ---------- */
+
+.box2-parent-container {
+    max-width: 900px;
+    margin: 40px auto 40px auto;
+    display: flex;
+}
+
+.one {
+    background-color: #FFF;
+    padding: 20px;
+    flex: 1;
+}
+
+.two {
+    background-color: yellow;
+    flex: 1;
+    display: flex;
+}
+
+.image-a {
+    background-color: #c0dbe2;
+    flex: 1;
+}
+
+.image-a img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

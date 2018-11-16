@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Krub:400,500,600,700|Raleway:100,200,300,400,500,600,700,900");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
+body {
+  width: 100%; }
+
+h1 {
+  font-family: 'Krub', sans-serif;
+  font-size: 60px;
+  color: white; }
+
+h2 {
+  font-family: 'Krub', sans-serif;
+  font-size: 50px;
+  color: white; }
+
+p {
+  font-size: 20px;
+  color: white; }
+
+a {
+  font-size: 1rem;
+  color: white; }
+
+.btn {
+  background-color: #0c2943;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  justify-content: center;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  -webkit-box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.4); }
+  .btn img {
+    height: 1rem;
+    margin-right: 10px; }
+  .btn:hover {
+    background-color: #ee1279;
+    color: #0c2943; }
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(10, 68, 155, 0.5); }
+  .hero p {
+    text-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.4); }
+  .hero .video {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1; }
+    .hero .video video {
+      min-width: 100%;
+      min-height: 100%; }
+  .hero nav {
+    overflow: hidden;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px; }
+    .hero nav .logo img {
+      height: 40px;
+      float: left; }
+      .hero nav .logo img:hover {
+        opacity: .6; }
+    .hero nav .desktopNav a {
+      text-decoration: none;
+      margin-right: 30px; }
+      .hero nav .desktopNav a:hover {
+        color: #eedc38; }
+    .hero nav .mobileNav {
+      display: none; }
+  .hero .heroContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto; }
+    .hero .heroContent h1 {
+      color: white; }
+    .hero .heroContent p {
+      color: white;
+      opacity: .7;
+      margin-bottom: 30px; }
+  .hero .scroll {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 1.7%;
+    bottom: 63px;
+    transform: rotate(270deg); }
+    .hero .scroll p {
+      color: white;
+      font-size: 16px; }
+    .hero .scroll .line {
+      background: white;
+      width: 70px;
+      height: 3px;
+      margin-right: 10px; }

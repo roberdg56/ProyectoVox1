@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {}
+
+/* ---------- Section - Services ---------- */
+
+.wrapper {
+    background: #eaec5b;
+    width: 1000px;
+    height: 600px;
+    margin: 6rem auto;
+    display: flex;
+    flex-flow: column nowrap;
+    /* justify-content: center; */
+    align-items: center;
+    overflow: hidden;
+}
+
+.four {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.box-container-0 {
+    background: #fff;
+    border: #ccc dotted 1px;
+    width: 800px;
+    min-height: 350px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.box-content-0 {
+    display: flex;
+    /* padding: 1rem; */
+    /* margin: 2rem; */
+    line-height: 1.6;
+}
+
+.left-side {
+    margin: 1rem;
+}
+
+.right-side {
+    margin: 1rem;
+}
+
+.box-container {
+    background: #fff;
+    border: #ccc dotted 1px;
+    width: 800px;
+    position: absolute;
+    top: 0;
+    /* min-height: 400px; */
+    transform: translate3d(0, -100%, 0);
+    transition: all .5s ease-out;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.box-container.show {
+    transform: translate3d(0, 0, 0);
+    transition: all .5s ease-out;
+}
+
+.box-content {
+    display: flex;
+    justify-content: center;
+}
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.box-content img {
+    width: 150px;
+    height: 150px;
+    padding: 1rem;
+}
+
+.three {
+    border: #f58686 dotted 1px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.one {
+    border: #f58686 dotted 1px;
+    margin-bottom: 1rem;
+}
+
+.one img {
+    width: 100px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ccc;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(53, 52, 52);
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    font-weight: 600;
+    color: rgb(53, 52, 52);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-top: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2::after {
+    content: "";
+    display: inline-block;
+    flex-flow: row nowrap;
+    background: url("../../img/Icons4/angle-down-solid.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin: 0 0 0 3rem;
+}

@@ -1,0 +1,49 @@
+.header {
+    background: rgb(10, 87, 131);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+
+
+nav {
+    overflow: hidden;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px;
+    // line-height: 60px;
+    // text-align: right;
+
+
+    .logo {
+
+        img {
+            height: 40px;
+            float: left;
+
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+
+    .desktopNav {
+        a {
+            text-decoration: none;
+            margin-right: 30px;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .mobileNav {
+        display: none;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container1 {
+            position: relative;
+        }
+
+        h2,
+        p {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        p {
+            top: 90px;
+        }
+
+        p:nth-child(2) {
+            top: 110px;
+        }
+
+        #grad1 {
+            height: 100vh;
+            background-color: #cccccc;
+            background-image: linear-gradient(red, yellow);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+        <h2>Linear Gradient as Background Image</h2>
+        <p>This linear gradient starts at the top. It starts red, transitioning to yellow:</p>
+        <div id="grad1"></div>
+        <p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support gradients.</p>
+    </div>
+
+</body>
+
+</html>

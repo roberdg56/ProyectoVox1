@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="servicesSection.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Services Section 1</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="one">
+            <img src="../../img/Icons3/Earth@2x.png" alt="Icon 1">
+        </div>
+        <div class="two">
+            <h1>Portafolio de Servicios</h1>
+        </div>
+        <div class="three" id="test">
+            <h2>Nuestros Servicios</h2>
+
+        </div>
+        <div class="four">
+            <div class="box-container-0">
+                <div class="box-content-0">
+                    <div class="left-side">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus vel sequi, tenetur
+                            consequatur facilis qui a molestiae ad exercitationem distinctio iusto laudantium
+                            recusandae nesciunt odit. Sunt minima delectus impedit rem!</p>
+                    </div>
+                    <div class="right-side">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur numquam qui adipisci,
+                            aut suscipit inventore. A ea fuga modi debitis recusandae blanditiis, autem nihil, rerum
+                            non voluptatem sed assumenda dolor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-container hide" id="show">
+                <div class="box-content">
+                    <div class="column-content">
+                        <img src="../../img/Icons3/Lupa.png" alt="Icon 1">
+                        <h3>Servicios</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quam praesentium veniam
+                            obcaecati magni nobis porro commodi autem asperiores.</p>
+                        <a href="#">conoce más...</a>
+                    </div>
+                    <div class="column-content">
+                        <img src="../../img/Icons3/folders.png" alt="Icon 1">
+                        <h3>Servicios</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quam praesentium veniam
+                            obcaecati magni nobis porro commodi autem asperiores.</p>
+                        <a href="#">conoce más...</a>
+                    </div>
+                    <div class="column-content">
+                        <img src="../../img/Icons3/lapiz-pincel.png" alt="Icon 1">
+                        <h3>Servicios</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quam praesentium veniam
+                            obcaecati magni nobis porro commodi autem asperiores.</p>
+                        <a href="#">conoce más...</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="five"></div>
+    </div>
+
+
+    <script>
+        var test = $("#test");
+        var show = $("#show");
+
+        test.click(function () {
+            if (show.is(".hide")) {
+                $(show).removeClass("hide");
+                $(show).addClass("show");
+            } else {
+                $(show).removeClass("show");
+                $(show).addClass("hide");
+            }
+            return false;
+        });
+    </script>
+</body>
+
+</html>
